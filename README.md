@@ -1,26 +1,16 @@
 # Decision-Tree
 Decision trees, including algorithms like ID3, C4.5, and CART, are powerful tools for classification and regression tasks. ID3, developed by Ross Quinlan, uses Information Gain to select the best attribute at each node, recursively dividing the data until homogenous subsets are achieved. C4.5, an improvement over ID3, addresses its limitations by using Information Gain Ratio, allowing for better handling of continuous attributes and reducing sensitivity to irrelevant features. CART (Classification and Regression Trees) is a versatile algorithm that can be used for both classification and regression tasks. It employs Gini impurity for classification, aiming to minimize impurity in each split, and mean squared error for regression. These decision tree algorithms are widely employed in machine learning due to their interpretability and effectiveness in capturing complex relationships within data.
 
-## C4.5
-This Python code implements a decision tree model using the C4.5 algorithm to classify Fisher's Iris dataset. The script begins by importing necessary libraries and loading the Iris dataset, converting numerical target values to corresponding class names. The loaded dataset is displayed, showcasing its structure.
+## Implementation from Scratch: C4.5 and CART Decision Trees
+In the provided code examples, both the C4.5 and CART decision tree algorithms have been implemented from scratch, showcasing a hands-on approach to understanding and constructing these fundamental machine learning models.
 
-Shannon entropy is calculated as a measure of dataset impurity. The script then defines functions for splitting datasets, calculating information gain, and constructing the decision tree based on the best features. The resulting tree is visualized using a provided tree plotting module.
+## C4.5 Decision Tree Implementation
+The C4.5 algorithm, introduced by Ross Quinlan, is a classic decision tree algorithm designed for classification tasks. In this implementation, Python is used to create a decision tree for classifying instances in Fisher's Iris dataset. The code takes a step-by-step approach, starting with dataset loading, entropy calculation, and recursive tree construction based on information gain.
 
-To demonstrate the decision tree's functionality, an example is provided for classifying an Iris instance. Users can replace the example instance with actual feature values. The predicted class is then printed. This code provides a clear and practical implementation of the C4.5 decision tree algorithm for classification tasks, especially useful for understanding and visualizing decision tree structures.
+## CART Decision Tree Implementation
+The CART (Classification and Regression Trees) algorithm, known for its versatility in handling both classification and regression tasks, is also implemented from scratch in the provided code. Focused on regression, the script approximates the "tip" column in the Tips dataset using a CART decision tree model. Key components include Gini index calculation, data splitting, and recursive tree building.
 
-## CART
-The script begins by importing necessary libraries, including pandas, numpy, and seaborn. It then loads the "tips" dataset using seaborn and displays a few examples to provide insights into the dataset's structure.
+## Hands-On Learning Experience
+By building these decision tree models from scratch, the code offers a valuable learning experience. It allows users to delve into the inner workings of these algorithms, gaining insights into the mechanics of decision tree construction, information gain, and impurity measures. This hands-on approach fosters a deeper understanding of the decision-making processes fundamental to machine learning algorithms.
 
-Next, a class Node is defined to represent a node in the decision tree. This class encapsulates information about the splitting feature, threshold, prediction value for a leaf, and references to the left and right subtrees.
-
-The script includes a function to calculate the Gini index, a measure of impurity used in the CART algorithm. Another function is defined to split the data based on a given feature and threshold value.
-
-The find_best_split function identifies the best feature and threshold for splitting the data to minimize the Gini index. This is a crucial step in building an effective decision tree.
-
-A recursive function, build_tree, constructs the decision tree based on the identified splits. The process continues until a specified depth is reached or a node becomes pure (contains only one class).
-
-To make predictions, the script provides functions predict_one for a single observation and predict for a set of observations using the constructed decision tree.
-
-Finally, the script demonstrates the entire process by loading the tips dataset, preparing the data, building a decision tree with a maximum depth of 3, and making predictions for the examples in the dataset.
-
-In summary, the script offers a clear and practical implementation of a CART decision tree for regression tasks, particularly applied to the "tip" column in the Tips dataset. The provided functions and structure facilitate understanding and application of the CART algorithm.
+In conclusion, the provided code exemplifies the implementation of C4.5 and CART decision trees without relying on external libraries, promoting a richer understanding of these algorithms and their application in real-world scenarios.
